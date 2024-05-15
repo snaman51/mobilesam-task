@@ -56,6 +56,7 @@ Before you begin, ensure you have the following installed on your machine:
 
    Your application should now be running at `http://localhost:8000`.
 
+   ![Fast API application running](Images/fastapi_application.png)
 ### Docker Setup
 
 1. **Build the Docker image:**
@@ -123,14 +124,14 @@ Before you begin, ensure you have the following installed on your machine:
 
 - **Response:**
     - **Success:**
-      - **Code:** 200 OK
+      - **Code:** `200 OK`
       - **Content:** Returns the segmented image file as a PNG.
     - **Client Errors:**
-        - **Code:** 400 Bad Request
+        - **Code:** `400 Bad Request`
         - **Detail:** "Invalid image file: {error_message}"
             - This error occurs when the uploaded file is not a valid image.
     - **Server Errors:**
-        - **Code:** 500 Internal Server Error
+        - **Code:** `500 Internal Server Error`
         - **Detail:** "Segmentation failed: {error_message}"
             - This error occurs when the segmentation process fails.
         - **Detail:** "Failed to save segmented image: {error_message}"
