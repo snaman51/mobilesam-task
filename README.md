@@ -140,3 +140,9 @@ Before you begin, ensure you have the following installed on your machine:
 
 ```sh
 curl -X POST "http://localhost:8000/segment-image" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@path_to_your_image.jpg"
+```
+
+Also, the swagger at http://localhost:8000/docs, can be used to test the endpoint.
+- Click on the endpoint and then on the `Try it out` button.
+- After this upload the image that has to be segmented, in the `file`.
+- After the execution of the endpoint, the image can be downloaded by clicking on the `download file` button. 
