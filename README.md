@@ -122,9 +122,19 @@ Before you begin, ensure you have the following installed on your machine:
 
 
 - **Response:**
-   - `200 OK`: Returns the segmented image.
-   - `400 Bad Request`: If the request is malformed.
-
+    - **Success:**
+      - **Code:** 200 OK
+      - **Content:** Returns the segmented image file as a PNG.
+    - **Client Errors:**
+        - **Code:** 400 Bad Request
+        - **Detail:** "Invalid image file: {error_message}"
+            - This error occurs when the uploaded file is not a valid image.
+    - **Server Errors:**
+        - **Code:** 500 Internal Server Error
+        - **Detail:** "Segmentation failed: {error_message}"
+            - This error occurs when the segmentation process fails.
+        - **Detail:** "Failed to save segmented image: {error_message}"
+            - This error occurs when saving the segmented image to disk fails.
 #### Example Request
 
 ```sh
